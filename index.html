@@ -34,7 +34,8 @@
     <div class="container mx-auto flex px-5 py-24 items-center justify-center flex flex-col">
       <div class="text-center lg:w-2/3 w-full">
         <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Comet Kits</h1>
-        <p class="leading-relaxed mb-8 text-white">An inexpensive way to teach future generations code</p>
+        <p class="leading-relaxed mb-8 text-white block w-full" style="max-width: 600px; margin: auto;">We designed and manufactured our own printed circuit board (PCB), 3D printed chassis design, catered software development environment, and a curriculum aligned with the Next Generation Science Standards.</p>
+        <br>
         <div class="flex justify-center">
           <button id="whatButton" class="inline-flex text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded text-lg">What is Comet Kits?</button>
         </div>
@@ -43,25 +44,48 @@
     </div>
   </section>
 
-  <section class="h-screen bg-white w-screen snap-start items-center text-center  text-gray-600 body-font justify-center flex flex-col " id="what" >
-    <h1 class="text-center w-full font-bold text-black text-4xl mt-25">What is Comet Kits</h1>
+  <section class="h-screen bg-gray-900 w-screen snap-start items-center text-center  text-gray-600 body-font justify-center flex flex-col " id="what" >
+    <h1 class="text-center w-full font-bold text-white text-4xl mt-25">What is Comet Kits</h1>
     <div class="items-center">
 
       <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
         <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-black">Your Robotics Experience
-            <br class="hidden lg:inline-block">Starts Here.
+          <h1 class="title-font sm:text-4xl text-3xl mb-0 font-medium text-white">The
+            <br class="hidden lg:inline-block">Problem.
           </h1>
-          <p class="mb-8 leading-relaxed ">Comet Kits are innovative and affordable 3D-printable kits designed to introduce young children to the world of coding and robotics, fostering a passion for technology and creativity. With a focus on open-source learning, Comet Kits empower the next generation to build and program their own robots, sparking their curiosity and imagination.</p>
+          <p class="mb-8 leading-relaxed text-white">Robotics kits that private schools and private programs use cost over $100 per each kit. We believe that all kids should have the privilege and access to such learning tools at an affordable price, regardless of their background. Access to robotics kits gives everyone a chance at starting develop the basic concepts of the STEM field.</p>
           <div class="flex justify-center">
             <button id="how" class="inline-flex text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded text-lg">How does it work?</button>
           </div>
         </div>
-        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-full" style="transform: scale(1.3);">
-          <video class="object-cover object-center rounded" autoplay muted loop style="width:100%; height:auto;">
-            <source src="./images/screencast.webm" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+        <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+          <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center justify-end">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
+              Our
+              <br class="hidden lg:inline-block">Solution.
+            </h1>
+          </div>
+          <p class="mb-8 leading-relaxed text-right text-white">Robotics kits that private schools and private programs use cost over $100 per each kit. We believe that all kids should have the privilege and access to such learning tools at an affordable price, regardless of their background. Access to robotics kits gives everyone a chance at starting develop the basic concepts of the STEM field.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="h-screen bg-white w-screen snap-start items-center text-center  text-gray-600 body-font justify-center flex flex-col ">
+    <h1 class="text-center w-full font-bold text-black text-4xl mt-25">A Custom Curriculum</h1>
+    <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+      <div class="flex justify-center items-center w-full">
+        <!-- Text block -->
+        <div class="w-full lg:w-1/2 px-4">
+          <p class="leading-relaxed text-base mb-8">
+            Collaborating with the teachers in our district, we customized the program to suit the specific needs and interests of students. Seeing how crucial the engineering design process is, our four-week program explores each and every step in an engaging manner. So far, we have conducted the program at multiple elementary schools and received approval from the SCUSD board. We created an instruction manual on how to use the kits and it also explains more advanced concepts such as the PID controller. For the younger kids we created worksheets with fun challenges and questions to help them understand the concepts better.
+          </p>
+        </div>
+        <!-- Image block -->
+        <div class="w-full lg:w-1/2 px-4">
+          <img src="./images/worksheet.png" alt="Your Image" class="w-full">
+          <!-- Subtitle for the image -->
+          <p class="text-gray-500 text-sm mt-2">An example introductory worksheet</p>
         </div>
       </div>
     </div>
@@ -75,15 +99,15 @@
       </div>
       <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
         <div class="flex flex-col mb-10 lg:items-start items-center">
-          <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-800 text-purple-400 mb-5">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-            </svg>
-          </div>
+<!--          <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-800 text-purple-400 mb-5">-->
+<!--            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">-->
+<!--              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>-->
+<!--            </svg>-->
+<!--          </div>-->
           <div class="flex-grow">
-            <h2 class="text-white text-lg title-font font-medium mb-3">Arduino Nano ATMega328</h2>
+            <h2 class="text-white text-lg title-font font-medium mb-3">Custom PCB with Arduino Nano ATMega328</h2>
             <p class="leading-relaxed text-base">Comet Kits feature an Arduino Nano ATMega328 microcontroller for versatile programming and control.</p>
-            <a class="mt-3 text-purple-400 inline-flex items-center">Learn More
+            <a class="mt-3 text-purple-400 inline-flex items-center" href="./docs/hardware.html">Learn More
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                 <path d="M5 12h14M12 5l7 7-7 7"></path>
               </svg>
@@ -91,17 +115,17 @@
           </div>
         </div>
         <div class="flex flex-col mb-10 lg:items-start items-center">
-          <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-800 text-purple-400 mb-5">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-              <circle cx="6" cy="6" r="3"></circle>
-              <circle cx="6" cy="18" r="3"></circle>
-              <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
-            </svg>
-          </div>
+<!--          <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-800 text-purple-400 mb-5">-->
+<!--            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">-->
+<!--              <circle cx="6" cy="6" r="3"></circle>-->
+<!--              <circle cx="6" cy="18" r="3"></circle>-->
+<!--              <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>-->
+<!--            </svg>-->
+<!--          </div>-->
           <div class="flex-grow">
-            <h2 class="text-white text-lg title-font font-medium mb-3">Custom PCB with L293D Motor Driver</h2>
-            <p class="leading-relaxed text-base">Each PCB Kit includes a custom-made PCB with an integrated L293D motor driver and GPIO pins for an MPU6050.</p>
-            <a class="mt-3 text-purple-400 inline-flex items-center" href="">Learn More
+            <h2 class="text-white text-lg title-font font-medium mb-3">L293D Motor Driver with 2 Motors and MPU6050</h2>
+            <p class="leading-relaxed text-base">Comet Kits come with motors that support a voltage range from 3V to 12V and offer a wide RPM range from 1500 to 13000, making them versatile for various applications. It also comes with a high quality IMU</p>
+            <a class="mt-3 text-purple-400 inline-flex items-center" href="./docs/How.html">Learn More
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                 <path d="M5 12h14M12 5l7 7-7 7"></path>
               </svg>
@@ -109,15 +133,15 @@
           </div>
         </div>
         <div class="flex flex-col mb-10 lg:items-start items-center">
-          <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-800 text-purple-400 mb-5">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
-          </div>
+<!--          <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-800 text-purple-400 mb-5">-->
+<!--            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">-->
+<!--              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>-->
+<!--              <circle cx="12" cy="7" r="4"></circle>-->
+<!--            </svg>-->
+<!--          </div>-->
           <div class="flex-grow">
-            <h2 class="text-white text-lg title-font font-medium mb-3">Motors: 3V to 12V, 1500-13000 RPM</h2>
-            <p class="leading-relaxed text-base">Comet Kits come with motors that support a voltage range from 3V to 12V and offer a wide RPM range from 1500 to 13000, making them versatile for various applications.</p>
+            <h2 class="text-white text-lg title-font font-medium mb-3">Power Supply</h2>
+            <p class="leading-relaxed text-base">Comet Kits come with 5000mAH which outputs a 5V (2.1A) connection into the Nano. This large battery provides more than enough power, lasts hours of runtime, and takes less than an hour to charge.</p>
             <a class="mt-3 text-purple-400 inline-flex items-center">Learn More
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                 <path d="M5 12h14M12 5l7 7-7 7"></path>
