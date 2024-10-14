@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comet Kits</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <style>
+        body {
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+        section {
+            scroll-snap-align: start;
+        }
+        canvas {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100vw;
+  max-height: 100vh;
+}
+#masthead {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 9999;
+}
+#masthead a {
+  padding: 1rem 2rem;
+}
+
+
+#panels #panels-container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ddd;
+}
+#panels #panels-container .panel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #333;
+  text-align: left;
+  border-right: 1px solid #f00;
+}
+#panels #panels-container .panel img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+#panels #panels-container .panel .panels-navigation {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+#panels #panels-container .panel .anchor-panel,
+#panels #panels-container .panel .nav-panel {
+  color: #000;
+  text-transform: uppercase;
+  margin-right: 2rem;
+}
+#panels #panels-container .panels-navigation {
+  position: absolute;
+  width: 100%;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+    </style>
+</head>
+<body class="bg-gray-900 text-white snap-y snap-mandatory h-screen overflow-scroll">
+    <header class="fixed top-0 w-full p-5 bg-gray-900 text-gray-400">
+        <div class="container mx-auto flex items-center justify-between">
+          <a href="#" class="text-white flex items-center">
+            <svg class="w-10 h-10 p-2 bg-purple-500 rounded-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl">Comet Kits</span>
+          </a>
+          <nav class="space-x-5">
+            <a href="#home" class="hover:text-white">Home</a>
+            <a href="#what" class="hover:text-white">What is Comet Kits?</a>
+            <a href="#how" class="hover:text-white">How it works</a>
+          </nav>
+        </div>
+      </header>
+
+    <!-- Header Section -->
+    <section class="h-screen bg-gray-900 flex items-center justify-center snap-start" style="background-image: url('./images/titleBackground.jpg'); background-size: cover;">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold">Comet Kits</h1>
+            <p class="text-lg mt-4 max-w-lg mx-auto">Affordable robotics kits for education, featuring custom PCB, 3D printed chassis, and catered software development environment.</p>
+            <button id="whatButton" class="mt-6 bg-purple-500 px-6 py-2 rounded hover:bg-purple-600">What is Comet Kits?</button>
+            <img src="./images/cometkits.png" alt="Comet Kits" class="w-2/3 mx-auto mt-8" id="kitImage">
+        </div>
+    </section>
+
+    <!-- What is Comet Kits Section -->
+    <section id="whatSection" class="h-screen bg-gray-800 flex items-center justify-center snap-start">
+        <div class="text-center">
+            <h2 class="text-3xl font-bold">What is Comet Kits?</h2>
+            <p class="mt-4 text-lg max-w-md mx-auto">Comet Kits is an affordable robotics kit designed to give students access to STEM education through hands-on learning tools.</p>
+            <button id="howButton" class="mt-6 bg-purple-500 px-6 py-2 rounded hover:bg-purple-600">How does it work?</button>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="h-screen bg-gray-900 flex items-center justify-center snap-start">
+        <div class="text-center">
+            <h2 class="text-3xl font-bold">Our Solution</h2>
+            <p class="mt-4 text-lg max-w-md mx-auto">We designed custom PCBs, 3D printed chassis, and a dedicated curriculum to make robotics kits accessible to all students.</p>
+        </div>
+    </section>
+    <!-- Iterations -->
+    <section id="iterations" class="h-screen iterations-section bg-gray-800 text-center flex items-center justify-center">
+        <h1 class="text-6xl font-bold">Iterations</h1>
+        <div id="panels-container" style="width: 500%;">
+            <article id="panel-1" class="panel full-screen red">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+    
+                    <img src="" alt="">
+    
+                  </div>
+                  <div class="col-6 d-flex flex-column">
+    
+                    <h2>Panel 1</h2>
+    
+                    <p class="step-description">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Including versions of Lorem Ipsum.
+                    </p>
+    
+                    <div class="panels-navigation text-right">
+                      <div class="nav-panel" data-sign="plus"><a href="#panel-2" class="anchor">Next</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article id="panel-2" class="panel full-screen orange">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+    
+                    <img src="" alt="">
+    
+                  </div>
+                  <div class="col-6 d-flex flex-column">
+    
+                    <h2>Panel 2</h2>
+    
+                    <p class="step-description">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Including versions of Lorem Ipsum.
+                    </p>
+    
+                    <div class="panels-navigation">
+                      <div class="nav-panel" data-sign="minus"><a href="#panel-1" class="anchor">Prev</a></div>
+                      <div class="nav-panel" data-sign="plus"><a href="#panel-3" class="anchor">Next</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article id="panel-3" class="panel full-screen purple">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+    
+                    <img src="" alt="">
+    
+                  </div>
+                  <div class="col-6 d-flex flex-column">
+    
+                    <h2>Panel 3</h2>
+    
+                    <p class="step-description">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Including versions of Lorem Ipsum.
+                    </p>
+    
+                    <div class="panels-navigation">
+                      <div class="nav-panel" data-sign="minus"><a href="#panel-2" class="anchor">Prev</a></div>
+                      <div class="nav-panel" data-sign="plus"><a href="#panel-4" class="anchor">Next</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article id="panel-4" class="panel full-screen green">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+    
+                    <img src="" alt="">
+    
+                  </div>
+                  <div class="col-6 d-flex flex-column">
+    
+                    <h2>Panel 4</h2>
+    
+                    <p class="step-description">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Including versions of Lorem Ipsum.
+                    </p>
+    
+                    <div class="panels-navigation">
+                      <div class="nav-panel" data-sign="minus"><a href="#panel-3" class="anchor">Prev</a></div>
+                      <div class="nav-panel" data-sign="plus"><a href="#panel-5" class="anchor">Next</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article id="panel-5" class="panel full-screen gray">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+    
+                    <img src="" alt="">
+    
+                  </div>
+                  <div class="col-6 d-flex flex-column">
+    
+                    <h2>Panel 5</h2>
+    
+                    <p class="step-description">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Including versions of Lorem Ipsum.
+                    </p>
+    
+                    <div class="panels-navigation text-right">
+                      <div class="nav-panel" data-sign="minus"><a href="#panel-4" class="anchor">Prev</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+
+    </section>
+    
+
+    <!-- Curriculum Section -->
+    <section class="h-screen bg-gray-900 flex items-center justify-center snap-start">
+        <div class="text-center">
+            <h2 class="text-3xl font-bold">Custom Curriculum</h2>
+            <p class="mt-4 text-lg max-w-md mx-auto">Our curriculum explores the engineering design process and teaches essential STEM skills in an engaging way.</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <section class="h-screen bg-gray-800 flex items-center justify-center snap-start">
+        <div class="text-center">
+            <h2 class="text-3xl font-bold">Get Started with Comet Kits</h2>
+            <p class="mt-4 text-lg max-w-md mx-auto">Join our mission to bring affordable robotics education to everyone.</p>
+        </div>
+    </section>
+
+    <script>
+        // GSAP animations
+        gsap.from("section", {
+            opacity: 0,
+            y: 100,
+            duration: 1,
+            scrollTrigger: {
+                trigger: "section",
+                start: "top 80%",
+                toggleActions: "play none none reverse"
+            }
+        });
+        gsap.from("#cometKitsTitle", { duration: 1.5, opacity: 0, y: -50 });
+        gsap.from("#whatButton", { duration: 1.5, opacity: 0, delay: 0.5 });
+        gsap.from("#kitImage", { duration: 1.5, opacity: 0, scale: 0.8, delay: 1 });
+
+        // Button scroll logic
+        document.getElementById("whatButton").addEventListener("click", function() {
+            document.getElementById("whatSection").scrollIntoView({ behavior: "smooth" });
+        });
+
+        const iterationSection = document.getElementById("iterations");
+        gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+
+/* Main navigation */
+let panelsSection = document.querySelector("#panels"),
+	panelsContainer = document.querySelector("#panels-container"),
+	tween;
+
+let scrollFunc = ScrollTrigger.getScrollFunc(window);
+
+document.querySelectorAll(".anchor").forEach(anchor => {
+	anchor.addEventListener("click", function(e) {
+		e.preventDefault();
+		let targetElem = document.querySelector(e.target.getAttribute("href")),
+			y = targetElem;
+		if (targetElem && panelsContainer.isSameNode(targetElem.parentElement)) {
+			let totalScroll = tween.scrollTrigger.end - tween.scrollTrigger.start,
+				totalMovement = (panels.length - 1) * targetElem.offsetWidth;
+			y = Math.round(tween.scrollTrigger.start + (targetElem.offsetLeft / totalMovement) * totalScroll);
+		}
+		gsap.to(window, {
+			scrollTo: {
+				y: y,
+				autoKill: false
+			},
+      onStart: () => scrollFunc.cacheID = Math.random(),
+      onUpdate: ScrollTrigger.update,
+			duration: 1
+		});
+	});
+});
+
+/* Panels */
+const panels = gsap.utils.toArray("#panels-container .panel");
+tween = gsap.to(panels, {
+	xPercent: -100 * ( panels.length - 1 ),
+	ease: "none",
+	scrollTrigger: {
+		trigger: "#panels-container",
+		pin: true,
+		start: "top top",
+		scrub: 1,
+    anticipatePin: 1,
+		snap: {
+			snapTo: 1 / (panels.length - 1),
+			inertia: false,
+			duration: {min: 0.1, max: 0.1}
+		},
+		end: () =>  "+=" + (panelsContainer.offsetWidth - innerWidth)
+	}
+});
+    </script>
+</body>
+</html>
