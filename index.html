@@ -60,16 +60,16 @@
     </div>
   </section>
 
-  <section class="h-screen bg-gray-900 w-screen snap-start items-center text-center  text-gray-600 body-font justify-center flex flex-col " id="what" >
+  <section class="h-screen bg-gray-900 w-screen snap-start items-center text-center text-gray-600 body-font justify-center flex flex-col" id="what">
     <h1 class="text-center w-full font-bold text-white text-4xl mt-25">What is Comet Kits</h1>
     <div class="items-center">
-
+  
       <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
         <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 class="title-font sm:text-4xl text-3xl mb-0 font-medium text-white">The
             <br class="hidden lg:inline-block">Problem.
           </h1>
-          <p class="mb-8 leading-relaxed text-white">Robotics kits that private schools and private programs use cost over $100 per each kit. We believe that all kids should have the privilege and access to such learning tools at an affordable price, regardless of their background. Access to robotics kits gives everyone a chance at starting develop the basic concepts of the STEM field.</p>
+          <p class="mb-8 leading-relaxed text-white">Robotics kits that private schools and private programs use cost over $100 per each kit. We believe that all kids should have the privilege and access to such learning tools at an affordable price, regardless of their background. Access to robotics kits gives everyone a chance at starting to develop the basic concepts of the STEM field.</p>
           <div class="flex justify-center">
             <button id="how" class="inline-flex text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded text-lg">How does it work?</button>
           </div>
@@ -81,7 +81,21 @@
               <br class="hidden lg:inline-block">Solution.
             </h1>
           </div>
-          <p class="mb-8 leading-relaxed text-right text-white">Robotics kits that private schools and private programs use cost over $100 per each kit. We believe that all kids should have the privilege and access to such learning tools at an affordable price, regardless of their background. Access to robotics kits gives everyone a chance at starting develop the basic concepts of the STEM field.</p>
+          <p class="mb-8 leading-relaxed text-right text-white">Robotics kits that private schools and private programs use cost over $100 per each kit. We believe that all kids should have the privilege and access to such learning tools at an affordable price, regardless of their background. Access to robotics kits gives everyone a chance at starting to develop the basic concepts of the STEM field.</p>
+        </div>
+      </div>
+  
+      <div class="text-center">
+        <h1 class="text-3xl font-bold text-white mb-4">NBC News Feature</h1>
+      
+        <!-- YouTube Embed -->
+        <div class="videoWrapper mb-4 flex justify-center">
+          <iframe width="560" height="349" src="https://www.youtube.com/embed/p5Mq5VVSzcs" frameborder="0" allowfullscreen class="rounded-lg"></iframe>
+        </div>
+      
+        <div class="mt-8">
+          <h2 class="text-xl font-semibold text-white mb-4">Sponsored By</h2>
+          <p class="text-gray-400">Global Foundries, Northrop Grumman, Santa Clara Unified School District</p>
         </div>
       </div>
     </div>
@@ -184,33 +198,46 @@
     </div>
   </section>
 
-  <section class="bg-gray-900 w-screen snap-start items-center text-center text-gray-600 body-font justify-center flex flex-col py-12">
+  <section class="bg-gray-900 h-screen w-screen snap-start items-center text-center text-gray-600 body-font justify-center flex flex-col py-12">
     <h1 class="text-center w-full font-bold text-white text-3xl mb-6">Iterations</h1>
     <p class="leading-relaxed text-white text-base mb-6 w-full mx-auto" style="max-width: 600px;">Over time, Comet Kits has gone through several iterations, improving design and functionality. Here are some snapshots of our progress:</p>
-    
-    <div class="container px-5 mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="w-full p-2">
-                <img class="rounded-lg" src="./images/iterations/0.png" alt="Iteration 1">
-                <p class="mt-2 text-white text-sm">Iteration 1: Initial Prototype</p>
+
+    <div id="carousel" class="relative w-full max-w-3xl mx-auto">
+        <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+            <!-- Slide 1 -->
+            <div class="absolute inset-0 transition-opacity duration-500 ease-in-out opacity-100" data-carousel-item onclick="openFullscreen(this)">
+                <img class="block w-full h-full object-cover" src="./images/iterations/0.png" alt="Iteration 1">
+                <p class="absolute bottom-2 left-2 text-white text-sm">Iteration 1: Initial Prototype</p>
             </div>
-            <div class="w-full p-2">
-                <img class="rounded-lg" src="./images/iterations/1.png" alt="Iteration 2">
-                <p class="mt-2 text-white text-sm">Iteration 2: Improved PCB Design</p>
+            <!-- Slide 2 -->
+            <div class="absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0" data-carousel-item onclick="openFullscreen(this)">
+                <img class="block w-full h-full object-cover" src="./images/iterations/1.png" alt="Iteration 2">
+                <p class="absolute bottom-2 left-2 text-white text-sm">Iteration 2: Improved PCB Design</p>
             </div>
-            <div class="w-full p-2">
-                <img class="rounded-lg" src="./images/iterations/2.png" alt="Iteration 3">
-                <p class="mt-2 text-white text-sm">Iteration 3: Custom 3D Printed Chassis</p>
+            <!-- Slide 3 -->
+            <div class="absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0" data-carousel-item onclick="openFullscreen(this)">
+                <img class="block w-full h-full object-cover" src="./images/iterations/2.png" alt="Iteration 3">
+                <p class="absolute bottom-2 left-2 text-white text-sm">Iteration 3: Custom 3D Printed Chassis</p>
             </div>
-            <div class="w-full p-2">
-                <img class="rounded-lg" src="./images/iterations/3.png" alt="Iteration 4">
-                <p class="mt-2 text-white text-sm">Iteration 4: Refined Electronics</p>
+            <!-- Slide 4 -->
+            <div class="absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0" data-carousel-item onclick="openFullscreen(this)">
+                <img class="block w-full h-full object-cover" src="./images/iterations/3.png" alt="Iteration 4">
+                <p class="absolute bottom-2 left-2 text-white text-sm">Iteration 4: Refined Electronics</p>
             </div>
-            <div class="w-full p-2">
-                <img class="rounded-lg" src="./images/iterations/4.png" alt="Iteration 5">
-                <p class="mt-2 text-white text-sm">Iteration 5: Final Product Design</p>
+            <!-- Slide 5 -->
+            <div class="absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0" data-carousel-item onclick="openFullscreen(this)">
+                <img class="block w-full h-full object-cover" src="./images/iterations/4.png" alt="Iteration 5">
+                <p class="absolute bottom-2 left-2 text-white text-sm">Iteration 5: Final Product Design</p>
             </div>
         </div>
+
+        <!-- Slider Controls -->
+        <button class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer" onclick="prevSlide()">
+            <span class="bg-white rounded-full p-2">❮</span>
+        </button>
+        <button class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer" onclick="nextSlide()">
+            <span class="bg-white rounded-full p-2">❯</span>
+        </button>
     </div>
 </section>
 
@@ -452,6 +479,40 @@
   </section>
 </div>
 <script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('[data-carousel-item]');
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.opacity = i === index ? '1' : '0';
+    });
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
+// Initialize the first slide
+showSlide(currentSlide);
+
+// Fullscreen functionality
+function openFullscreen(element) {
+    const img = element; // The image clicked
+    if (img.requestFullscreen) {
+        img.requestFullscreen();
+    } else if (img.webkitRequestFullscreen) { // Safari
+        img.webkitRequestFullscreen();
+    } else if (img.msRequestFullscreen) { // IE11
+        img.msRequestFullscreen();
+    }
+}
+
   document.getElementById('whatButton').addEventListener('click', function(event) {
     event.preventDefault();
     document.getElementById('what').scrollIntoView({ behavior: 'smooth' });
